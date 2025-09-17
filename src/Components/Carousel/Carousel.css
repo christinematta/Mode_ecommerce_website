@@ -1,0 +1,36 @@
+
+.slick-slider {
+  display: block !important;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex !important;
+  transition: transform 0.5s;
+}
+
+.slick-slide {
+  float: none !important;
+  height: auto;
+  display: flex !important;    /* unified version */
+  justify-content: center;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+  font-size: 30px !important;
+}
+
+.slick-dots li button:before {
+  color: black !important;
+}
+

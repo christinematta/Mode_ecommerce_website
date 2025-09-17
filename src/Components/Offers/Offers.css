@@ -1,0 +1,85 @@
+.offers-container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  justify-content: space-between;
+  margin: 150px 50px 50px 50px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.offers-left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transform: translate(21%, 0%);
+}
+
+.year {
+  font-size: 1.75rem;
+  letter-spacing: 0.1em;
+  color: #66504b;
+  font-weight: 700;
+}
+.headline-wrapper {
+  position: relative;
+}
+
+.headline {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #111;
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.cupon-img img{
+  width: 100%;
+}
+
+.offers-right {
+  position: relative;
+  height: 70vh;
+  min-height: 600px;
+  z-index: 1;
+  background-image: url("../Assets/offers.jpg");
+  background-size: cover;
+}
+
+.model-image {
+  height: 550px;
+  object-fit: cover;
+}
+
+.shop-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  border: none;
+
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.2s;
+}
+
+.shop-btn:hover {
+  transform: scale(1.05);
+  font-weight: bold;
+}

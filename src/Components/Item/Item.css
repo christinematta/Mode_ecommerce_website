@@ -1,0 +1,51 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform: skewX(-5deg);
+}
+
+.item:hover {
+  transform: skewX(-5deg) scale(1.05);
+}
+
+.item-image {
+  width: 250px;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.item-name {
+  margin-top: 10px;
+  font-size: 15px;
+  width: 80%;
+  font-weight: 300;
+}
+
+.item-prices {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  margin-top: 8px;
+}
+
+.item-price-new {
+  color: #e60023;
+  font-weight: bold;
+}
+
+.item-price-old {
+  text-decoration: line-through;
+  color: #888;
+}
+.percentage {
+  color: #e60023;
+}
