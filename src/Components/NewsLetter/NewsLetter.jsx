@@ -32,19 +32,19 @@ const NewsLetter = () => {
           promotions and online exclusives.{" "}
         </p>
         <div className="social-media-icons">
-          <a href="https://www.facebook.com/YourPage" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
     <FaFacebookF />
   </a>
 
-  <a href="https://twitter.com/YourProfile" target="_blank" rel="noopener noreferrer">
+  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
     <FaXTwitter />
   </a>
 
-  <a href="https://www.instagram.com/YourProfile" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
     <FaInstagram />
   </a>
 
-  <a href="https://www.youtube.com/YourChannel" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
     <FaYoutube />
   </a>
         </div>
