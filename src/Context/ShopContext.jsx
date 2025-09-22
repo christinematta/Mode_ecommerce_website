@@ -1,14 +1,14 @@
 import React, { createContext } from "react";
 import all_Products from "../Components/Assets/all_product";
 
-const shopContext = createContext(null);
+export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
   const contextValue = { all_Products };
   return (
-    <shopContext.Provider value={contextValue}>
+    <ShopContext.Provider value={contextValue}>
       {props.children}
-    </shopContext.Provider>
+    </ShopContext.Provider>
   );
 };
 
