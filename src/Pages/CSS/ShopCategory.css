@@ -1,0 +1,49 @@
+.shop-category-banner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.shop-category-banner img {
+  width: 100%;
+  height: 380px;
+}
+.shop-category-banner h1 {
+  text-transform: uppercase;
+  font-family: "Georgia", serif;
+}
+.shop-catecory-right {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  left: 55%;
+  color: #4d3434;
+}
+.category-details{
+  text-align: center;
+}
+.category-details p{
+  margin-bottom: 2px;
+}
+.category-details h3{
+  margin-top: 8px;
+  letter-spacing: 4px;
+}
+.category-btn{
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin: auto;
+  background-color: black;
+  color: antiquewhite;
+  width: 40%;
+  align-items: center;
+  padding: 10px;
+  transition:transform 0.2s;
+}
+.category-btn:hover{
+  padding: 11px;
+  font-weight: 700;
+  transform: scale(1.05);
+}
