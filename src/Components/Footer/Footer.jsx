@@ -43,12 +43,12 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="payment-options">
           <img src={process.env.PUBLIC_URL + "/logos/visa.png"} alt="Visa" />
-          <img src="/logos/applepay.png" alt="Apple Pay" />
-          <img src="/logos/googlepay.png" alt="Google Pay" />
-          <img src="/logos/klarna.svg" alt="Klarna" />
-          <img src="/logos/ideal.png" alt="iDEAL" />
-          <img src="/logos/mastercard.svg" alt="MasterCard" />
-          <img src="/logos/paypal.svg" alt="PayPal" />
+          <img src={process.env.PUBLIC_URL + "/logos/applepay.png"} alt="Apple Pay" />
+          <img src={process.env.PUBLIC_URL + "/logos/googlepay.png"} alt="Google Pay" />
+          <img src={process.env.PUBLIC_URL + "/logos/klarna.svg"} alt="Klarna" />
+          <img src={process.env.PUBLIC_URL + "/logos/ideal.png"} alt="iDEAL" />
+          <img src={process.env.PUBLIC_URL + "/logos/mastercard.svg"} alt="MasterCard" />
+          <img src={process.env.PUBLIC_URL + "/logos/paypal.svg"} alt="PayPal" />
         </div>
       </div>
     </div>
