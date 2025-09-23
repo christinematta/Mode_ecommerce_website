@@ -14,7 +14,7 @@ import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/Mode_ecommerce_website">
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
