@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div className="payment-options">
-          <img src="/logos/visa.png" alt="Visa" />
+          <img src={process.env.PUBLIC_URL + "/logos/visa.png"} alt="Visa" />
           <img src="/logos/applepay.png" alt="Apple Pay" />
           <img src="/logos/googlepay.png" alt="Google Pay" />
           <img src="/logos/klarna.svg" alt="Klarna" />
