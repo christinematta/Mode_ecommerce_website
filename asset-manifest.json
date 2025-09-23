@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Mode_ecommerce_website/static/css/main.eead69cb.css",
-    "main.js": "/Mode_ecommerce_website/static/js/main.2df2e9d8.js",
+    "main.js": "/Mode_ecommerce_website/static/js/main.c5b3d6ff.js",
     "static/js/453.18f0dd47.chunk.js": "/Mode_ecommerce_website/static/js/453.18f0dd47.chunk.js",
     "static/media/Mode_video.mp4": "/Mode_ecommerce_website/static/media/Mode_video.fafbaa21efb29b4ab4a6.mp4",
     "static/media/newsletter.jpg": "/Mode_ecommerce_website/static/media/newsletter.c8714285a5839c96cfa1.jpg",
@@ -47,18 +47,18 @@
     "static/media/product_18.png": "/Mode_ecommerce_website/static/media/product_18.7bc661c637994b718fca.png",
     "static/media/product_26.png": "/Mode_ecommerce_website/static/media/product_26.1ddf1e3b668f2e7b7683.png",
     "static/media/product_35.png": "/Mode_ecommerce_website/static/media/product_35.073b8b5de77cfc979821.png",
-    "static/media/MŌDE-logo.png": "/Mode_ecommerce_website/static/media/MŌDE-logo.abed0a9d52a86fe9897e.png",
+    "static/media/MODE-logo.png": "/Mode_ecommerce_website/static/media/MODE-logo.abed0a9d52a86fe9897e.png",
     "static/media/slick.svg": "/Mode_ecommerce_website/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Mode_ecommerce_website/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/Mode_ecommerce_website/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Mode_ecommerce_website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Mode_ecommerce_website/index.html",
     "main.eead69cb.css.map": "/Mode_ecommerce_website/static/css/main.eead69cb.css.map",
-    "main.2df2e9d8.js.map": "/Mode_ecommerce_website/static/js/main.2df2e9d8.js.map",
+    "main.c5b3d6ff.js.map": "/Mode_ecommerce_website/static/js/main.c5b3d6ff.js.map",
     "453.18f0dd47.chunk.js.map": "/Mode_ecommerce_website/static/js/453.18f0dd47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eead69cb.css",
-    "static/js/main.2df2e9d8.js"
+    "static/js/main.c5b3d6ff.js"
   ]
 }
