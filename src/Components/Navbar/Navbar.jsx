@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
-import logo from "../Assets/MŌDE-logo.png";
+import logo from "../Assets/MODE-logo.png";
 import { Link } from "react-router-dom";
 
 const menuItems = ["shop", "men", "women", "kids"];
