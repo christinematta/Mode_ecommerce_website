@@ -1,5 +1,5 @@
 ## 🌐 Live Demo
-[Mode E-commerce Website](https://matta.github.io/Mode_ecommerce_website/)
+[Mode E-commerce Website](https://matta.github.io/Mode_ecommerce_website/](https://christinematta.github.io/Mode_ecommerce_website/)
 
 
 # Getting Started with Create React App
