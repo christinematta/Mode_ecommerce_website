@@ -35,33 +35,33 @@ const LoginPopup = ({ onClose }) => {
         <form onSubmit={handelSubmit}>
           {!isLogin && (
             <>
-              <lable>Name</lable>
+              <label>Name</label>
               <input
                 type="text"
                 name="name"
                 placeholder="Enter your name"
                 value={formData.name}
-                onchange={handelChange}
+                onChange={handelChange}
               />
             </>
           )}
 
-          <lable>Email</lable>
+          <label>Email</label>
           <input
             type="text"
-            name="emal"
+            name="email"
             placeholder="Enter your email"
             value={formData.email}
-            onchange={handelChange}
+            onChange={handelChange}
             required
           />
-          <lable>Password</lable>
+          <label>Password</label>
           <input
             type="text"
             name="password"
-            placeholder="Enter your name"
+            placeholder="Enter your password"
             value={formData.password}
-            onchange={handelChange}
+            onChange={handelChange}
             required
           />
           <button type="submit" className="auth-btn">
