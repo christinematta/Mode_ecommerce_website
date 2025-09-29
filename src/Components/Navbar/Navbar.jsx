@@ -4,11 +4,13 @@ import { faUser, faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 import logo from "../Assets/MODE-logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const menuItems = ["shop", "men", "women", "kids"];
-const Navbar = () => {
+const Navbar = ({onLoginClick}) => {
   const [menu, setMenu] = useState("shop");
+  const location = useLocation()
+
   return (
     <div className="navbar">
       <Link to="/" className="link-reset" style={{display:"flex"}}>
@@ -35,7 +37,7 @@ const Navbar = () => {
       </ul>
       <div className="nav-login-cart">
         {" "}
-        <Link to="/login" className="link-reset">
+        <Link to={location.pathname} className="link-reset" onClick={onLoginClick}>
           <FontAwesomeIcon icon={faUser} className="icon user-icon" />
         </Link>
         <Link to="/cart"  className="link-reset">
