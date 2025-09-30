@@ -1,6 +1,6 @@
 // src/Components/ItemsList/ItemsList.jsx
 import React from "react";
-import './PopularList.css'
+import "./PopularList.css";
 import Item from "../Item/Item";
 import products from "../Assets/all_product";
 import Carousel from "../Carousel/Carousel";
@@ -21,6 +21,8 @@ const ItemsList = () => {
           }}
           renderItem={(item) => (
             <Item
+              key={item.id}
+              id={item.id}
               image={item.image}
               name={item.name}
               new_price={item.new_price}
