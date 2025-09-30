@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProductDisplay.css";
+import SizeDropdown from "../SizeDropdown/SizeDropdown";
 
 const ProductDisplay = ({ product }) => {
   const salePercentage = Math.ceil(
@@ -30,15 +31,8 @@ const ProductDisplay = ({ product }) => {
           <p>{`${salePercentage}%`}</p>
         </div>
         <p>{product.description}</p>
-        <div className="product-size">
-          <p>Select Size</p>
-          <div className="product-size-label">
-            <button>S</button>
-            <button>M</button>
-            <button>L</button>
-            <button>XL</button>
-            <button>XLL</button>
-          </div>
+        <SizeDropdown />
+        <div>
           <button>Add to Card</button>
         </div>
       </div>

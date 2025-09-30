@@ -1,0 +1,24 @@
+.size-dropdown {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.size-dropdown label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.size-dropdown select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.size-dropdown select:focus {
+  outline: none;
+  border-color: #555;
+}
