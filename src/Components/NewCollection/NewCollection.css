@@ -6,7 +6,13 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
 }
-
+.newcollection-grid .item{
+  transition: transform 0.2s;
+  transform: skewX(-5deg);
+}
+.newcollection-grid .item:hover{
+    transform: skewX(-5deg) scale(1.05);
+}
 @media (min-width: 1200px) {
   .newcollection-grid {
     grid-template-columns: repeat(4, 1fr);

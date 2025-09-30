@@ -8,11 +8,9 @@
   background: #fff;
   cursor: pointer;
   transition: transform 0.2s;
-  transform: skewX(-5deg);
 }
-
 .item:hover {
-  transform: skewX(-5deg) scale(1.05);
+  transform: scale(1.05);
 }
 
 .item-image {
