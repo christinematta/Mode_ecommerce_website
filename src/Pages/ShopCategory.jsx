@@ -5,9 +5,9 @@ import { IoIosArrowDown } from "react-icons/io";
 import Item from "../Components/Item/Item";
 
 const ShopCategory = (props) => {
-  const { all_Products } = useContext(ShopContext);
+  const { all_Product } = useContext(ShopContext);
 
-  const filtered_category = all_Products.filter(
+  const filtered_category = all_Product.filter(
     (item) => item.category === props.category
   );
   return (
@@ -37,7 +37,8 @@ const ShopCategory = (props) => {
         <div className="category-item">
           {filtered_category.map((item) => (
             <Item
-            key={item.id}
+              key={item.id}
+              id={item.id}
               image={item.image}
               name={item.name}
               new_price={item.new_price}

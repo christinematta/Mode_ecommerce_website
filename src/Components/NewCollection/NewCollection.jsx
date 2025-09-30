@@ -8,11 +8,12 @@ import Header from "../Header/Header";
 const NewCollection = () => {
   return (
     <div className="newcollection-container">
-      <Header header={"New Collection"}/>
+      <Header header={"New Collection"} />
       <div className="newcollection-grid">
         {newcollection.map((item) => (
           <Item
-          key={item.id}
+            key={item.id}
+            id={item.id}
             image={item.image}
             name={item.name}
             new_price={item.new_price}
