@@ -10,3 +10,10 @@
   width: 90%;
   overflow: visible;
 }
+.items-grid .item{
+  transition: transform 0.2s;
+  transform: skewX(-5deg);
+}
+.items-grid .item:hover{
+    transform: skewX(-5deg) scale(1.05);
+}

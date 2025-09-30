@@ -62,7 +62,7 @@
   justify-content: space-between;
   padding: 40px 50px;
 }
-.category-sort span{
+.category-sort span {
   font-weight: 700;
 }
 .sort-btn {
@@ -84,16 +84,10 @@
   background-color: black;
   color: antiquewhite;
 }
-.category-item{
+.category-item {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 50px;
- margin-bottom: 100px;
+  margin-bottom: 100px;
 }
-.category-item .item {
-  transition: transform 0.2s;
-  transform:none;
-}
-.category-item .item:hover {
-  transform: scale(1.05);
-}
+
