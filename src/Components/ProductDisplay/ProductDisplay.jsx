@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProductDisplay.css";
 import SizeDropdown from "../SizeDropdown/SizeDropdown";
+import RatingStars from "../RatingStars/RatingStars";
 
 const ProductDisplay = ({ product }) => {
   const salePercentage = Math.ceil(
@@ -22,7 +23,7 @@ const ProductDisplay = ({ product }) => {
       <div className="display-right">
         <h3>{product.name}</h3>
         <div className="product-rating">
-          <p>{product.rating}</p>
+          <RatingStars rating={product.rating}/>
           <p>{product.reviews}</p>
         </div>
         <div className="product-price">
