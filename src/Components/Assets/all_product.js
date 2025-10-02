@@ -84,8 +84,8 @@ const descriptions = {
 
 all_product = all_product.map((product) => ({
   ...product,
-  rating: Number((Math.random() * 5).toFixed(1)),
-  reviews: Math.floor(Math.random() * 201),       
+  rating: Number((Math.random() * 4 + 1).toFixed(1)),
+  reviews: Math.floor(Math.random() * (200 - 10 + 1)) + 10,
   description: descriptions[product.category] || "High-quality product made with premium materials.",
 }));
 

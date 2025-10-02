@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductDisplay.css";
 import SizeDropdown from "../SizeDropdown/SizeDropdown";
 import RatingStars from "../RatingStars/RatingStars";
+import { FaRegHeart } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa";
 
 const ProductDisplay = ({ product }) => {
+  const [isFav, setIsFav] = useState(false);
   const salePercentage = Math.ceil(
     ((product.old_price - product.new_price) / product.old_price) * 100
   );
@@ -23,8 +26,8 @@ const ProductDisplay = ({ product }) => {
       <div className="display-right">
         <h3>{product.name}</h3>
         <div className="product-rating">
-          <RatingStars rating={product.rating}/>
-          <p>{product.reviews}</p>
+          <RatingStars rating={product.rating} />
+          <p>{`${product.reviews} reviews`}</p>
         </div>
         <div className="product-price">
           <p>{`€${product.new_price}`}</p>
@@ -33,8 +36,16 @@ const ProductDisplay = ({ product }) => {
         </div>
         <p>{product.description}</p>
         <SizeDropdown />
-        <div>
-          <button>Add to Card</button>
+        <div className="product-action-box">
+          <button className="add-cart-btn">Add to Card</button>
+          <button
+            className={`fav-btn ${isFav}?"active":""`}
+            onClick={() => {
+              setIsFav(!isFav);
+            }}
+          >
+            {isFav ? <FaHeart className="fav-btn-color"/> : <FaRegHeart />}
+          </button>
         </div>
       </div>
     </div>
