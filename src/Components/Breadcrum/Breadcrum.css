@@ -1,15 +1,24 @@
-.breadcrum-list{
+.breadcrum-list {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
   padding: 50px;
-
-}
-.breadcrum-list p{
   font-size: 15px;
   font-weight: 600;
 }
-.breadcrum-list svg{
+
+.breadcrum-list a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.breadcrum-list a:visited,
+.breadcrum-list a:focus,
+.breadcrum-list a:hover,
+.breadcrum-list a:active {
+  all: unset;
+  cursor: pointer;
+}
+.breadcrum-list svg {
   font-size: 20px;
 }
