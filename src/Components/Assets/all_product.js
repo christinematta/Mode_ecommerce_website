@@ -35,6 +35,8 @@ import p34_img from "./product_34.png";
 import p35_img from "./product_35.png";
 import p36_img from "./product_36.png";
 
+import generateReviews from "../Assets/random_reviews";
+
 let all_product = [
   { id: 1, name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse", category: "women", image: p1_img, new_price: 50.0, old_price: 80.5 },
   { id: 2, name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse", category: "women", image: p2_img, new_price: 85.0, old_price: 120.5 },
@@ -81,12 +83,19 @@ const descriptions = {
   kids: "Fun, playful, and comfortable — perfect for active kids who love to move, explore, and play all day!",
 };
 
+all_product = all_product.map((product) => {
+  // 3–7 reviews per product
+  const productReviews = generateReviews(Math.floor(Math.random() * 5) + 3);
 
-all_product = all_product.map((product) => ({
-  ...product,
-  rating: Number((Math.random() * 4 + 1).toFixed(1)),
-  reviews: Math.floor(Math.random() * (200 - 10 + 1)) + 10,
-  description: descriptions[product.category] || "High-quality product made with premium materials.",
-}));
+  return {
+    ...product,
+    rating: Number((Math.random() * 4 + 1).toFixed(1)), // between 1 and 5
+    reviews: productReviews,                             // array of reviews
+    reviewsCount: productReviews.length,
+    description:
+      descriptions[product.category] ||
+      "High-quality product made with premium materials.",
+  };
+});
 
 export default all_product;

@@ -1,0 +1,24 @@
+.product-tabs {
+  display: flex;
+  flex-direction: column;
+}
+.tab-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.tab-buttons button {
+  background-color: white;
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #8080802e;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+
+}
+.tab-buttons .active {
+  background-color: #8080802e;
+  border: none;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+}

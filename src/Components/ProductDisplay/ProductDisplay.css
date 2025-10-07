@@ -1,8 +1,12 @@
 .display-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 50px 100px;
   gap: 150px;
+}
+.display-top{
+  display: flex;
+  flex-direction: row;
 }
 .display-left {
   display: flex;
