@@ -4,7 +4,7 @@ import all_Product from "../Components/Assets/all_product";
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
-
+  const [selectedProduct,setSelectedProduct] = useState(null)
 
   const getDefaultCart = () => {
     let cart = {};
@@ -27,7 +27,8 @@ const ShopContextProvider = (props) => {
   const getTotalCartNumber = (cartItems)=>{
 return Object.values(cartItems).reduce((acc,cur)=>acc + cur,0)
   }
-   const contextValue = { all_Product,cartItems, addToCart,removeFromCart,getTotalCartNumber};
+
+   const contextValue = { all_Product,selectedProduct,setSelectedProduct,cartItems, addToCart,removeFromCart,getTotalCartNumber};
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

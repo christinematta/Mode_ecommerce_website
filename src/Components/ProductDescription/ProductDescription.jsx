@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ProductDescription.css";
-const ProductDescription = ({product}) => {
+import { ShopContext } from "../../Context/ShopContext";
+const ProductDescription = () => {
+  const {selectedProduct} = useContext(ShopContext)
   return (
     <div className="product-container">
       <h1 className="product-title">Classic Cotton T-Shirt</h1>
 
       <p className="product-description">
-        {`Step up your style with this premium-quality ${product.name}. Crafted from
+        {`Step up your style with this premium-quality ${selectedProduct.name}. Crafted from
         high-quality materials, it offers the perfect balance of comfort,
         durability, and modern design. Whether you’re dressing up for a casual
         outing or keeping it relaxed, this piece ensures you look and feel your

@@ -3,8 +3,9 @@ import "./ProductTabs.css";
 import ReviewSection from "../ReviewSection/ReviewSection";
 import ProductDescription from "../ProductDescription/ProductDescription";
 
-const ProductTabs = ({ product }) => {
+const ProductTabs = () => {
   const [activeTab, setActiveTab] = useState("description");
+
   return (
     <div className="product-tabs">
       <div className="tab-buttons">
@@ -24,9 +25,9 @@ const ProductTabs = ({ product }) => {
       </div>
       <div className="tab-content">
       {activeTab === "description" ? (
-        <ProductDescription product={product} />
+        <ProductDescription/>
       ) : (
-        <ReviewSection product={product} />
+        <ReviewSection/>
       )}
       </div>
     </div>
