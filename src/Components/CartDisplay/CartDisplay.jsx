@@ -11,7 +11,7 @@ const CartDisplay = ({ cart_items }) => {
 
   return (
     <div className="cart-container">
-      <div className="cart-left">
+      {getTotalCartNumber(cartItems)>0?<div className="cart-left">
         <h2>
           Shopping Cart <span> ({getTotalCartNumber(cartItems)} Items)</span>
         </h2>
@@ -26,7 +26,9 @@ const CartDisplay = ({ cart_items }) => {
         </div>
 
         <CartItem cart_items={cart_items} />
-      </div>
+
+      </div>:<h1>Shopping Cart is empty</h1>}
+
       <div className="cart-right"></div>
     </div>
   );

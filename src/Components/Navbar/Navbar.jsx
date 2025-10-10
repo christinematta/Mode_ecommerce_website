@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 import logo from "../Assets/MODE-logo.png";
 import { Link, useLocation } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 const menuItems = ["shop", "men", "women", "kids"];
 const Navbar = ({onLoginClick}) => {
   const [menu, setMenu] = useState("shop");
   const location = useLocation()
+  const {getTotalCartNumber, cartItems,} = useContext(ShopContext)
 
   return (
     <div className="navbar">
@@ -43,7 +45,7 @@ const Navbar = ({onLoginClick}) => {
         <Link to="/cart"  className="link-reset">
           <div className="icon-wrapper">
             <FontAwesomeIcon icon={faBagShopping} className="icon cart-icon" />
-            <div className="nav-cart-count">10</div>
+            <div className="nav-cart-count">{getTotalCartNumber( cartItems,)}</div>
           </div>
         </Link>
       </div>

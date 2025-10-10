@@ -22,6 +22,9 @@ const ShopContextProvider = (props) => {
       [itemId]: Math.max(prev[itemId] - 1, 0),
     }));
   };
+  const deleteItemFromCart = (itemId)=>{
+    setCartItems((prev)=>({...prev,[itemId]:0}))
+  }
   const getTotalCartNumber = (cartItems) => {
     return Object.values(cartItems).reduce((acc, cur) => acc + cur, 0);
   };
@@ -35,6 +38,7 @@ const ShopContextProvider = (props) => {
     addToCart,
     removeFromCart,
     getTotalCartNumber,
+    deleteItemFromCart
   };
   return (
     <ShopContext.Provider value={contextValue}>
