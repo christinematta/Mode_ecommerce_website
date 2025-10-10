@@ -1,11 +1,9 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState ,useEffect} from "react";
 import all_Product from "../Components/Assets/all_product";
 
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
-
-
   const getDefaultCart = () => {
     let cart = {};
     all_Product.forEach((product) => {
@@ -21,13 +19,23 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({
       ...prev,
-      [itemId]: Math.Max(prev[itemId] - 1, 0),
+      [itemId]: Math.max(prev[itemId] - 1, 0),
     }));
   };
-  const getTotalCartNumber = (cartItems)=>{
-return Object.values(cartItems).reduce((acc,cur)=>acc + cur,0)
-  }
-   const contextValue = { all_Product,cartItems, addToCart,removeFromCart,getTotalCartNumber};
+  const getTotalCartNumber = (cartItems) => {
+    return Object.values(cartItems).reduce((acc, cur) => acc + cur, 0);
+  };
+   useEffect(() => {
+    console.log("🛍️ Cart changed:", cartItems);
+  }, [cartItems]);
+
+  const contextValue = {
+    all_Product,
+    cartItems,
+    addToCart,
+    removeFromCart,
+    getTotalCartNumber,
+  };
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

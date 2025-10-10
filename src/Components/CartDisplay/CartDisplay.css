@@ -11,9 +11,41 @@
   padding: 50px;
 
 }
-.cart-left .delivery-data{
+.delivery-data{
+  line-height: 1px;
+
+}
+.delivery-data .delivery-data-header{
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
+}
+.delivery-data-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+
+.delivery-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delivery-header p {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.delivery-icon {
+  font-size: 18px;
+  color: #555;
+}
+
+.delivery-estimate {
+  margin-left: 25px;
 }
