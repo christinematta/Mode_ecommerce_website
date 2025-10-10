@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./CartItem.css";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
-import { RiDeleteBinLine } from "react-icons/ri";
+import { IoMdClose } from "react-icons/io";
 
 const CartItem = ({ cart_items }) => {
   const [isFav, setIsFav] = useState(false);
@@ -20,29 +20,22 @@ const CartItem = ({ cart_items }) => {
             <div className="cartitem-right">
               <div className="item-data">
                 <h4>{item.name}</h4>
-                <p>€{item.new_price}</p>
+                <p>€ {item.new_price * cartItems[item.id]}</p>
                 <p>Size: M</p>
 
                 <div className="item-control">
                   <div className="item-quantity">
-                         <button onClick={() => removeFromCart(item.id)}>-</button>
-                  <span>{cartItems[item.id]}</span>
-                  <button onClick={() => addToCart(item.id)}>+</button>
-
+                    <button onClick={() => removeFromCart(item.id)}>-</button>
+                    <span>{cartItems[item.id]}</span>
+                    <button onClick={() => addToCart(item.id)}>+</button>
+                  </div>
+                  <div className="item-delete">
+                    <IoMdClose onClick={() => deleteItemFromCart(item.id)} />
+                  </div>
                 </div>
-                <div className="item-delete">
-                    <RiDeleteBinLine
-                    onClick={() => deleteItemFromCart(item.id)}
-                  />
-                  </div>
-                  </div>
-
 
                 <div className="add-fav">
-                  <Link
-                    className="wishlist-link"
-                    onClick={() => setIsFav(true)}
-                  >
+                  <Link onClick={(item) => setIsFav(true)}>
                     {isFav ? "on your wishlist" : "Add to your wishlist"}
                   </Link>
                 </div>

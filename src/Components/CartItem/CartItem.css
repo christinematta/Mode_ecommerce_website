@@ -1,50 +1,63 @@
-.cart-item-container{
+.cart-item-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.cart-item{
+.cart-item {
   display: flex;
   flex-direction: row;
   gap: 20px;
   padding-top: 30px;
 }
-.cartitem-left img{
+.cartitem-left img {
   width: 150px;
 }
-.cartitem-right{
+.cartitem-right {
   display: flex;
   flex-direction: column;
-
 }
-.item-data{
+.item-data {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.cartitem-right .item-data h4,p{
+.cartitem-right .item-data h4,
+p {
   margin: 0px;
   font-weight: 400;
 }
-.item-control{
+.item-control {
   display: flex;
   flex-direction: row;
   gap: 100px;
 }
 
-.item-quantity{
+.item-quantity {
   display: flex;
   flex-direction: row;
   gap: 10px;
   font-size: 20px;
 }
-.item-quantity button{
+.item-quantity button {
   width: 30px;
   font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.item-delete svg{
+.item-delete svg {
   font-size: 25px;
   cursor: pointer;
+}
+.add-fav a{
+  cursor: pointer;
+  text-decoration: none;
+}
+.add-fav a:focus,
+.add-fav a:active,
+.add-fav a:hover,
+.add-fav a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  all: unset;
 }

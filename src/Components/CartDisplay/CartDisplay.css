@@ -1,6 +1,6 @@
 .cart-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .cart-left {
   display: flex;
@@ -25,7 +25,7 @@
   gap: 2px;
   margin-top: 8px;
 }
-.delivery-data-header svg{
+.delivery-data-header svg {
   font-size: 20px;
 }
 .delivery-header {
@@ -47,4 +47,92 @@
 
 .delivery-estimate {
   margin-left: 30px;
+}
+.cart-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-info svg {
+  font-size: 20px;
+}
+.cart-right-payment {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  background-color: #efeff0;
+  margin: 100px;
+  width: 30%;
+  height: 50%;
+  padding: 30px;
+  top: 0%;
+  left: 50%;
+
+  gap: 20px;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 900;
+  padding: 0px 30px;
+}
+
+.cart-right-payment button {
+  background: black;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  width: 90%;
+  margin: auto;
+  cursor: pointer;
+}
+.cart-right-payment button:hover {
+  background: #bfbfc0;
+  color: black;
+  border: 1px solid black;
+}
+.payment-options-img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 23px 0px;
+}
+.payment-options-img img {
+  width: 60px;
+}
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.empty-cart svg {
+  font-size: 60px;
+  margin-left: 47%;
+  margin-top: 10%;
+}
+.empty-cart p {
+  margin: auto;
+}
+.empty-cart a {
+  width: 200px;
+  margin: auto;
+  padding: 10px;
+  font-weight: 600;
+  background: black;
+  color: white;
+  margin-bottom: 10%;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+.empty-cart a:hover {
+  background: #bfbfc0;
+  color: black;
+  border: 1px solid black;
 }
