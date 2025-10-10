@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./CartDisplay.css";
+import "./DeliveryEstimate";
 import { BsBoxSeam } from "react-icons/bs";
+import DeliveryEstimate from "./DeliveryEstimate";
+import { ShopContext } from "../../Context/ShopContext";
+import CartItem from "../CartItem/CartItem";
 
-const CartDisplay = () => {
+const CartDisplay = ({ cart_items }) => {
+  const { getTotalCartNumber, cartItems } = useContext(ShopContext);
+
   return (
     <div className="cart-container">
       <div className="cart-left">
         <h2>
-          Shopping Cart <span> 2 Items</span>
+          Shopping Cart <span> ({getTotalCartNumber(cartItems)} Items)</span>
         </h2>
         <div className="delivery-data">
-          <BsBoxSeam />
-          <p>Package will be delivered by Mōde</p>
+          <div className="delivery-data-header">
+            <BsBoxSeam />
+            <p>Package will be delivered by Mōde </p>
+          </div>
+          <div className="delivery-estimate">
+            <DeliveryEstimate />
+          </div>
         </div>
-        <p>Tomorrow, 10-10 - Mon, 13-10</p>
+
+        <CartItem cart_items={cart_items} />
       </div>
       <div className="cart-right"></div>
     </div>
