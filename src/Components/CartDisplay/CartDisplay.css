@@ -1,21 +1,19 @@
-.cart-container{
+.cart-container {
   display: flex;
   flex-direction: column;
-
 }
-.cart-left{
+.cart-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 60%;
   padding: 50px;
-
 }
-.delivery-data{
-  line-height: 1px;
-
+.delivery-data {
+  line-height: 30px;
+  margin-bottom: 50px;
 }
-.delivery-data .delivery-data-header{
+.delivery-data .delivery-data-header {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -27,8 +25,9 @@
   gap: 2px;
   margin-top: 8px;
 }
-
-
+.delivery-data-header svg{
+  font-size: 20px;
+}
 .delivery-header {
   display: flex;
   align-items: center;
@@ -47,5 +46,5 @@
 }
 
 .delivery-estimate {
-  margin-left: 25px;
+  margin-left: 30px;
 }

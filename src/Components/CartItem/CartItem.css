@@ -1,0 +1,50 @@
+.cart-item-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cart-item{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-top: 30px;
+}
+.cartitem-left img{
+  width: 150px;
+}
+.cartitem-right{
+  display: flex;
+  flex-direction: column;
+
+}
+.item-data{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cartitem-right .item-data h4,p{
+  margin: 0px;
+  font-weight: 400;
+}
+.item-control{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.item-quantity{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 20px;
+}
+.item-quantity button{
+  width: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.item-delete svg{
+  font-size: 25px;
+  cursor: pointer;
+}
