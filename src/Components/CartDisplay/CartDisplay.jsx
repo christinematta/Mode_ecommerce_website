@@ -9,12 +9,13 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaBagShopping } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const CartDisplay = ({ cart_items }) => {
+const CartDisplay = ({ cart_items, total_cost }) => {
   const { getTotalCartNumber, cartItems } = useContext(ShopContext);
+  const Dispatch_cost = 4.5;
 
   return (
     <div>
-      {getTotalCartNumber(cartItems) > 0 ? (
+      {getTotalCartNumber(cartItems,) > 0 ? (
         <div className="cart-container">
           <div className="cart-left">
             <h2>
@@ -41,19 +42,19 @@ const CartDisplay = ({ cart_items }) => {
           <div className="cart-right-payment">
             <div className="total">
               <p>Subtotal</p>
-              <p>€ total</p>
+              <p>€ {total_cost}</p>
             </div>
             <div className="total">
               <p>Dispatch</p>
-              <p>€ total</p>
+              <p>€ {Dispatch_cost}</p>
             </div>
             <hr style={{ width: "90%" }} />
             <div className="total">
               <p>
                 Total price{" "}
                 <span style={{ fontSize: "12px" }}>including VAT</span>
-              </p>{" "}
-              <p>€ total</p>
+              </p>
+              <p>€ {total_cost + Dispatch_cost}</p>
             </div>
             <button>Checkout</button>
             <div className="payment-options-container">
