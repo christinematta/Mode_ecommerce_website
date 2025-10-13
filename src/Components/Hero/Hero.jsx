@@ -5,7 +5,7 @@ import mode_video from '../Assets/Mode_video.mp4';
 
 const Hero = () => {
   return (
-    <div className="hero">
+
        <section className="hero">
       <video
         className="hero-video"
@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
     </section>
 
-    </div>
+
   )
 }
 
