@@ -1,4 +1,5 @@
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,6 +117,21 @@
 }
 
 @media (max-width: 900px) {
+  .navbar {
+    justify-content: start;
+    gap: 72%;
+    height: 60px;
+    padding: 6px 20px;
+  }
+  .nav-logo img {
+    width: 130px;
+  }
+  .nav-login-cart {
+    gap: 17px;
+  }
+  .nav-login-cart svg {
+    font-size: 17px;
+  }
   .desktop-menu {
     display: none;
   }
@@ -126,9 +142,9 @@
 
   .mobile-menu {
     position: absolute;
-    top: 100px;
-    left: 80%;
-    width: 20%;
+    top: 8%;
+    left: 60%;
+    width: 11%;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -158,19 +174,63 @@
   }
 }
 
-
 @media (max-width: 600px) {
   .navbar {
-    height: 80px;
-    padding: 0 20px;
+    justify-content: start;
+    gap: 70%;
+    height: 60px;
+    padding: 6px 20px;
   }
 
   .nav-logo img {
-    width: 140px;
+    width: 100px;
+  }
+  .nav-login-cart {
+    gap: 17px;
+  }
+  .nav-login-cart svg {
+    font-size: 17px;
   }
 
   .mobile-menu {
     top: 80px;
-    gap: 20px;
+    left: 50%;
+    gap: 25px;
+    width: 15%;
+  }
+  .mobile-menu li {
+    font-size: 15px;
+  }
+  .mobile-menu .active a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    justify-content: start;
+    gap:55%;
+    height: 60px;
+    padding: 6px 20px;
+  }
+
+  .nav-logo img {
+    width: 100px;
+  }
+  .nav-login-cart svg {
+    font-size: 17px;
+  }
+
+  .mobile-menu {
+    top: 80px;
+    left: 65%;
+    gap: 25px;
+    width: 25%;
+  }
+
+  .mobile-menu li {
+    font-size: 15px;
+  }
+  .mobile-menu .active a {
+    font-size: 15px;
   }
 }
