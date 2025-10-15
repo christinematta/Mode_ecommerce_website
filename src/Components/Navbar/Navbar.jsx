@@ -22,11 +22,9 @@ const Navbar = ({ onLoginClick }) => {
 
   return (
     <nav className="navbar">
-
       <Link to="/" className="link-reset nav-logo">
         <img src={logo} alt="logo_icon" />
       </Link>
-
 
       <ul className="nav-menu desktop-menu">
         {menuItems.map((item, index) => (
@@ -35,7 +33,7 @@ const Navbar = ({ onLoginClick }) => {
             className={`${menu === item ? "active" : ""}`}
             onClick={() => setMenu(item)}
           >
-            <Link to={index === 0 ? "/" : `/${item}`} >
+            <Link to={index === 0 ? "/" : `/${item}`}>
               {item.charAt(0).toUpperCase() + item.slice(1)}
               {menu === item && <hr />}
             </Link>
@@ -43,23 +41,18 @@ const Navbar = ({ onLoginClick }) => {
         ))}
       </ul>
 
-
       <div className="nav-login-cart">
-        <Link
-          to={location.pathname}
-
-          onClick={onLoginClick}
-        >
+        <Link to={location.pathname} onClick={onLoginClick}>
           <FaRegUser className="icon user-icon" />
         </Link>
 
-        <Link to="/cart" >
+        <Link to="/cart">
           <div className="icon-wrapper">
             <IoBagHandleOutline className="icon cart-icon" />
             <div
               className={
-                getTotalCartNumber(cartItems) > 0
-              ?"nav-cart-count":"hidden"}
+                getTotalCartNumber(cartItems) > 0 ? "nav-cart-count" : "hidden"
+              }
             >
               {getTotalCartNumber(cartItems) > 0 &&
                 getTotalCartNumber(cartItems)}
@@ -67,14 +60,16 @@ const Navbar = ({ onLoginClick }) => {
           </div>
         </Link>
 
-
         {isMenuOpen ? (
-          <RxCross2 onClick={toggleMenu} className="burger-menu" />
+          <Link>
+            <RxCross2 onClick={toggleMenu} className="burger-menu" />
+          </Link>
         ) : (
-          <GiHamburgerMenu onClick={toggleMenu} className="burger-menu" />
+          <Link>
+            <GiHamburgerMenu onClick={toggleMenu} className="burger-menu" />
+          </Link>
         )}
       </div>
-
 
       {isMenuOpen && (
         <ul className="nav-menu mobile-menu">
