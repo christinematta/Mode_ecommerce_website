@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px;
+  /* margin: 50px; */
 }
 
 .items-grid {
@@ -10,10 +10,87 @@
   width: 90%;
   overflow: visible;
 }
-.items-grid .item{
-  transition: transform 0.2s;
-  transform: skewX(-5deg);
+
+/* ---- Ensure items don't stretch or overflow ---- */
+.items-grid .slick-slide > div {
+  display: flex !important;
+  justify-content: center;
 }
-.items-grid .item:hover{
-    transform: skewX(-5deg) scale(1.05);
+
+.items-grid .item {
+  transition: transform 0.2s ease;
+  transform: skewX(-5deg);
+  max-width: 260px; /* optional: prevent too-wide items */
+}
+
+.items-grid .item:hover {
+  transform: skewX(-5deg) scale(1.05);
+}
+
+/* ---------------RESPONSIVE BREAKPOINTS ----------*/
+
+@media (min-width: 1280px) {
+  .popular-container {
+    margin: auto;
+  }
+  .items-grid {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 900px) {
+  .popular-container {
+    margin: 60px 40px;
+  }
+  .items-grid {
+    width: 90%;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+  .popular-container {
+    margin: 50px 38px;
+  }
+  .items-grid {
+    width: 100%;
+  }
+  .items-grid .item {
+    transform: skewX(-3deg);
+  }
+}
+
+
+@media (max-width: 599px) and (min-width: 480px) {
+  .popular-container {
+    margin: 40px 35px;
+  }
+  .items-grid {
+    width: 100%;
+  }
+  .items-grid .item {
+    transform: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .popular-container {
+    margin: 30px 55px;
+  }
+  .items-grid {
+    width: 100%;
+  }
+
+
+  .items-grid .item {
+    transform: none;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  /* Prevent extra horizontal scroll */
+  .slick-track {
+    display: flex !important;
+    justify-content: center;
+  }
 }

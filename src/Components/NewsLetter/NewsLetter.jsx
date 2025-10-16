@@ -27,7 +27,7 @@ const NewsLetter = () => {
             <IoArrowRedoCircleSharp />
           </button>
         </div>
-        <p>
+        <p className="subscribe-title">
           Subscribe and be the first to hear about new arrivals, special
           promotions and online exclusives.{" "}
         </p>
