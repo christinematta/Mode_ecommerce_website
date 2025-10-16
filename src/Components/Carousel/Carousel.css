@@ -15,7 +15,7 @@
 .slick-slide {
   float: none !important;
   height: auto;
-  display: flex !important;    /* unified version */
+  display: flex !important;   
   justify-content: center;
 }
 
@@ -33,4 +33,3 @@
 .slick-dots li button:before {
   color: black !important;
 }
-

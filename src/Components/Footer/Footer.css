@@ -1,4 +1,5 @@
 .footer-container {
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   padding: 50px;
@@ -55,4 +56,154 @@
 
 .payment-options img:hover {
   transform: scale(1.05);
+}
+
+/* ---------------RESPONSIVE BREAKPOINTS ----------*/
+
+@media (min-width: 1280px) {
+  .footer-top {
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .footer-sections h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-sections a {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 1279px) and (min-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+  }
+
+  .footer-details {
+    gap: 10%;
+  }
+
+  .footer-sections h4 {
+    font-size: 1rem;
+  }
+
+  .footer-sections a {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 899px) and (min-width: 600px) {
+  .footer-container {
+    padding: 40px 30px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-details {
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .logo-footer img {
+    width: 180px;
+  }
+
+  .footer-sections {
+    align-items: center;
+  }
+
+  .footer-sections h4 {
+    font-size: 1rem;
+  }
+
+  .footer-sections a {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 599px) and (min-width: 480px) {
+  .footer-container {
+    padding: 30px 20px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-sections {
+    align-items: center;
+  }
+
+  .footer-sections h4 {
+    font-size: 0.95rem;
+  }
+
+  .footer-sections a {
+    font-size: 0.85rem;
+  }
+
+  .logo-footer img {
+    width: 150px;
+  }
+
+  .payment-options img {
+    height: 30px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 25px 15px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-sections {
+    align-items: center;
+  }
+
+  .footer-sections h4 {
+    font-size: 0.9rem;
+  }
+
+  .footer-sections a {
+    font-size: 0.8rem;
+  }
+
+  .logo-footer img {
+    width: 130px;
+  }
+
+  .payment-options img {
+    height: 30px;
+    width: 60px;
+    padding: 5px 8px;
+  }
 }
