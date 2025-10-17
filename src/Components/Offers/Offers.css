@@ -120,7 +120,7 @@
   .offers-left {
     align-items: center;
     text-align: center;
-    transform: none;
+    transform: translate(47px, 10px);
   }
 
   .headline {
@@ -136,9 +136,8 @@
 
   .shop-btn {
     position: relative;
-    margin: 20px auto 30px auto;
-    bottom: auto;
-    right: auto;
+    left: 69%;
+    top: 86%;
   }
 }
 
@@ -151,7 +150,6 @@
   .offers-left {
     align-items: center;
     text-align: center;
-    transform: none;
   }
 
   .year {
@@ -206,7 +204,7 @@
   .offers-right {
     height: 40vh;
     min-height: 300px;
-      transform: translate(0px, 10px);
+    transform: translate(0px, 10px);
   }
 
   .shop-btn {

@@ -47,3 +47,109 @@
 .percentage {
   color: #e60023;
 }
+
+
+/* --------------- RESPONSIVE BREAKPOINTS ------------ */
+
+/* 🖥️ Large Desktop (≥1280px) */
+@media (min-width: 1280px) {
+  .item {
+    width: 280px;
+  }
+  .item-image {
+    width: 230px;
+    height: 320px;
+  }
+}
+
+/* 💻 Laptops / Tablets Landscape (900–1279px) */
+@media (max-width: 1279px) and (min-width: 900px) {
+  .item {
+    width: 250px;
+    padding: 12px;
+  }
+  .item-image {
+    width: 220px;
+    height: 300px;
+  }
+  .item-name {
+    font-size: 14px;
+  }
+  .item-price-new {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 Tablets Portrait (600–899px) */
+@media (max-width: 899px) and (min-width: 600px) {
+  .item {
+    width: 220px;
+    padding: 10px;
+  }
+  .item-image {
+    width: 200px;
+    height: 280px;
+  }
+  .item-name {
+    font-size: 13px;
+  }
+  .item-prices {
+    gap: 15px;
+  }
+}
+
+/* 📱 Mobile Landscape (480–599px) */
+@media (max-width: 599px) and (min-width: 480px) {
+  .item {
+    width: 180px;
+    padding: 8px;
+  }
+  .item-image {
+    width: 160px;
+    height: 220px;
+  }
+  .item-name {
+    font-size: 12px;
+    width: 90%;
+  }
+  .item-prices {
+    gap: 10px;
+  }
+  .item-price-new,
+  .item-price-old,
+  .percentage {
+    font-size: 0.85rem;
+  }
+}
+
+/* 📱 Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .item {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+  }
+
+  .item-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .item-name {
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .item-prices {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .item-price-new,
+  .item-price-old,
+  .percentage {
+    font-size: 0.9rem;
+  }
+}

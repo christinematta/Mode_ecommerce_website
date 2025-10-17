@@ -117,11 +117,12 @@
   }
 
   .footer-sections {
+    width: 40%;
     align-items: center;
   }
 
   .footer-sections h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .footer-sections a {

@@ -7,7 +7,7 @@
   margin-top: 150px;
 }
 .newsletter-left {
-  width: 40%;
+  max-width: 40%;
 }
 .newsletter-left img {
   width: 100%;
@@ -109,23 +109,22 @@
   }
 }
 
-/* 📱 Tablets Portrait (600–899px) */
 @media (max-width: 899px) and (min-width: 600px) {
   .newsletter-container {
     flex-direction: column;
-    gap: 40px;
     margin-top: 100px;
   }
 
   .newsletter-left,
   .newsletter-right {
-    width: 100%;
+    max-width: 100%;
   }
 
   .newsletter-right {
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    margin: 0px auto;
+    padding: 40px auto;
   }
 
   .email-box {
@@ -133,11 +132,15 @@
   }
 
   .email-input {
-    width: 70%;
+    width: 400px;
   }
 
   .email-btn {
     right: 15%;
+  }
+  .email-btn svg {
+    position: relative;
+    left: 17px;
   }
 }
 
@@ -149,13 +152,13 @@
   }
 
   .newsletter-left {
-    width: 100%;
+    max-width: 100%;
   }
 
   .newsletter-right {
     width: 100%;
     text-align: center;
-    padding: 30px 15px;
+    padding: 30px 0px;
     align-items: center;
   }
 
@@ -164,7 +167,7 @@
   }
 
   .email-input {
-    width: 75%;
+    width: 400px;
     height: 40px;
   }
 
@@ -172,7 +175,13 @@
     font-size: 38px;
     right: 10%;
   }
-
+  .email-btn svg {
+    position: relative;
+    top: -25px;
+    left: 2px;
+    width: 47px;
+    font-size: 100px;
+  }
   .social-media-icons a svg {
     font-size: 22px;
   }
@@ -197,7 +206,7 @@
     text-align: center;
     align-items: center;
   }
-  .newsletter-right .subscribe-title{
+  .newsletter-right .subscribe-title {
     font-size: 1rem;
   }
 
@@ -219,7 +228,12 @@
     font-size: 35px;
     right: 8%;
   }
-
+  .email-btn svg {
+    position: relative;
+    top: 1px;
+    left: -16px;
+    font-size: 46px;
+  }
   .social-media-icons a svg {
     font-size: 20px;
   }
