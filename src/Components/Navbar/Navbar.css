@@ -103,7 +103,6 @@
 
 /* ---------------RESPONSIVE BREAKPOINTS ----------*/
 
-
 @media (max-width: 1280px) {
   .navbar {
     padding: 0 40px;
@@ -120,7 +119,6 @@
 @media (max-width: 900px) {
   .navbar {
     justify-content: start;
-    gap: 72%;
     height: 60px;
     padding: 6px 20px;
   }
@@ -128,6 +126,7 @@
     width: 130px;
   }
   .nav-login-cart {
+    margin-left: auto;
     gap: 17px;
   }
   .nav-login-cart svg {
@@ -175,10 +174,9 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 899px) and (min-width: 600px) {
   .navbar {
     justify-content: start;
-    gap: 70%;
     height: 60px;
     padding: 6px 20px;
   }
@@ -187,6 +185,7 @@
     width: 100px;
   }
   .nav-login-cart {
+    margin-left: auto;
     gap: 17px;
   }
   .nav-login-cart svg {
@@ -195,10 +194,42 @@
 
   .mobile-menu {
     top: 80px;
-    left: 50%;
+    left: 80%;
     gap: 25px;
-    width: 15%;
+    width: 19%;
   }
+  .mobile-menu li {
+    font-size: 15px;
+  }
+  .mobile-menu .active a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 599px) and (min-width: 480px) {
+  .navbar {
+    justify-content: start;
+
+    height: 60px;
+    padding: 6px 20px;
+  }
+
+  .nav-logo img {
+    width: 100px;
+  }
+  .nav-login-cart {
+    margin-left: auto;
+  }
+  .nav-login-cart svg {
+    font-size: 17px;
+  }
+
+  .mobile-menu {
+    top: 80px;
+    left: 75%;
+    gap: 25px;
+    width: 25%;
+  }
+
   .mobile-menu li {
     font-size: 15px;
   }
@@ -209,13 +240,15 @@
 @media (max-width: 480px) {
   .navbar {
     justify-content: start;
-    gap:55%;
     height: 60px;
     padding: 6px 20px;
   }
 
   .nav-logo img {
     width: 100px;
+  }
+  .nav-login-cart {
+    margin-left: auto;
   }
   .nav-login-cart svg {
     font-size: 17px;
