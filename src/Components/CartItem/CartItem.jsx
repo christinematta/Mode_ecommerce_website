@@ -10,41 +10,52 @@ const CartItem = ({ cart_items }) => {
     useContext(ShopContext);
   return (
     <div className="cart-item-list">
-      {cart_items.map((item) => (
-        <div className="cart-item-container" key={item.id}>
-          <div className="cart-item">
-            <div className="cartitem-left">
-              <img src={item.image} alt={item.name} className="cart-item-img" />
-            </div>
+ {Object.entries(cartItems).map(([key, qty]) => {
 
-            <div className="cartitem-right">
-              <div className="item-data">
-                <h4>{item.name}</h4>
-                <p>€ {item.new_price * cartItems[item.id]}</p>
-                <p>Size: M</p>
+  const [id, size] = key.split("_");
+  const item = cart_items.find((p) => p.id.toString() === id);
 
-                <div className="item-control">
-                  <div className="item-quantity">
-                    <button onClick={() => removeFromCart(item.id)}>-</button>
-                    <span>{cartItems[item.id]}</span>
-                    <button onClick={() => addToCart(item.id)}>+</button>
-                  </div>
-                  <div className="item-delete">
-                    <IoMdClose onClick={() => deleteItemFromCart(item.id)} />
-                  </div>
-                </div>
+  if (!item) return null;
 
-                <div className="add-fav">
-                  <Link onClick={(item) => setIsFav(true)}>
-                    {isFav ? "on your wishlist" : "Add to your wishlist"}
-                  </Link>
-                </div>
+  return (
+    <div className="cart-item-container" key={key}>
+      <div className="cart-item">
+        <div className="cartitem-left">
+          <img src={item.image} alt={item.name} className="cart-item-img" />
+        </div>
+
+        <div className="cartitem-right">
+          <div className="item-data">
+            <h4>{item.name}</h4>
+            <p>€ {item.new_price * qty}</p>
+            <p>Size: {size}</p>
+
+            <div className="item-control">
+              <div className="item-quantity">
+                <button onClick={() => removeFromCart(id, size)}>-</button>
+                <span>{qty}</span>
+                <button onClick={() => addToCart(id, size)}>+</button>
+              </div>
+
+              <div className="item-delete">
+                <IoMdClose onClick={() => deleteItemFromCart(id, size)} />
               </div>
             </div>
+
+            <div className="add-fav">
+              <Link onClick={() => setIsFav(true)}>
+                {isFav ? "on your wishlist" : "Add to your wishlist"}
+              </Link>
+            </div>
           </div>
-          <hr style={{ width: "100%" }} />
         </div>
-      ))}
+      </div>
+
+      <hr style={{ width: "100%" }} />
+    </div>
+  );
+})}
+
     </div>
   );
 };

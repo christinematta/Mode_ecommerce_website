@@ -136,3 +136,127 @@
   color: black;
   border: 1px solid black;
 }
+
+/* -------------- BREAKPOINTS -------------- */
+
+@media (max-width: 1280px) and (min-width: 900px) {
+  .cart-container {
+    padding: 30px 40px;
+    gap: 30px;
+  }
+  .cart-right-payment {
+    margin: 70px auto;
+    width: 500px;
+  }
+  .payment-options-img img {
+    width: 56px;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+  .cart-container {
+    flex-direction: column;
+    padding: 24px 24px 40px;
+    gap: 24px;
+  }
+
+  .cart-left {
+    width: 90%;
+  }
+
+  .cart-right-payment {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    border-radius: 8px;
+  }
+
+  .total {
+    padding: 0 6px;
+    font-size: 14px;
+  }
+
+  .payment-options-img {
+    gap: 18px;
+  }
+
+  .payment-options-img img {
+    width: 52px;
+  }
+
+  .delivery-estimate {
+    margin-left: 30px;
+  }
+  .cart-right-payment{
+    margin:auto;
+    width:80%
+  }
+}
+
+@media (max-width: 599px) and (min-width: 480px) {
+  .cart-container {
+    flex-direction: column;
+    padding: 18px 16px 32px;
+    gap: 18px;
+  }
+  .cart-left {
+    padding: 5%;
+    width: 90%;
+  }
+
+  .delivery-data {
+    margin-bottom: 28px;
+    line-height: 26px;
+  }
+  .delivery-estimate p {
+    margin-left: 10px;
+  }
+  .cart-right-payment {
+    padding: 18px;
+    margin: auto;
+    width: 80%;
+    left: 0px;
+  }
+
+  .cart-right-payment button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .payment-options-img {
+    gap: 14px;
+  }
+
+  .payment-options-img img {
+    width: 44px;
+  }
+
+  .cart-info svg {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-container {
+    padding: 14px 12px 28px;
+    flex-direction: column;
+  }
+  .cart-left {
+    padding: 5%;
+    width: 90%;
+  }
+  .cart-right-payment {
+    width: 80%;
+    margin: auto;
+  }
+  .cart-left h2 {
+    font-size: 1.2rem;
+  }
+  .payment-options-img img {
+    width: 40px;
+  }
+
+  .total {
+    font-size: 13px;
+  }
+}
