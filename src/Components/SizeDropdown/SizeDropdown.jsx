@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { forwardRef } from "react";
 import "./SizeDropdown.css";
-const SizeDropdown = () => {
-  const [size, setSize] = useState("");
 
-  const handleChange = (e) => {
-    setSize(e.target.value);
-  };
+const SizeDropdown = forwardRef(({ size, setSize }, ref) => {
   return (
     <div className="size-dropdown">
       <label htmlFor="size">Select Size</label>
-      <select id="size" value={size} onChange={handleChange}>
+      <select
+        ref={ref}
+        id="size"
+        value={size}
+        onChange={(e) => setSize(e.target.value)}
+      >
         <option value="" disabled hidden>
           Choose Size
         </option>
@@ -21,6 +22,6 @@ const SizeDropdown = () => {
       </select>
     </div>
   );
-};
+});
 
 export default SizeDropdown;

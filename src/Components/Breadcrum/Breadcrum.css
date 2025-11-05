@@ -1,6 +1,6 @@
 .breadcrum-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   padding: 50px;
@@ -21,4 +21,54 @@
 }
 .breadcrum-list svg {
   font-size: 20px;
+}
+.breadcrum-list p{
+  font-weight: 600;
+}
+/* ----------- RESPONSIVE BREAKPOINTS ---------- */
+
+
+@media (max-width: 900px) {
+  .breadcrum-list {
+    padding: 30px 30px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .breadcrum-list svg {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .breadcrum-list {
+    padding: 20px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .breadcrum-list svg {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .breadcrum-list {
+    padding: 15px;
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .breadcrum-list svg {
+    font-size: 14px;
+  }
+
+  .breadcrum-list p,
+  .breadcrum-list a {
+  
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./ProductDisplay.css";
 import SizeDropdown from "../SizeDropdown/SizeDropdown";
 import RatingStars from "../RatingStars/RatingStars";
@@ -11,9 +11,23 @@ const ProductDisplay = ({ product }) => {
 
   const {addToCart} = useContext(ShopContext);
   const [isFav, setIsFav] = useState(false);
+  const [size, setSize] = useState("");
+  const sizeRef = useRef(null);
+
+  const handleAdd =()=>{
+    if(!size){
+      sizeRef.current.focus();
+      sizeRef.current.click();
+      try { sizeRef.current.click(); } catch {}
+      return;
+    }
+    addToCart(product.id,size)
+  }
+
   const salePercentage = Math.ceil(
     ((product.old_price - product.new_price) / product.old_price) * 100
   );
+
   return (
     <div className="display-container">
       <div className="display-top">
@@ -40,9 +54,9 @@ const ProductDisplay = ({ product }) => {
             <p>{`${salePercentage}%`}</p>
           </div>
           <p>{product.description}</p>
-          <SizeDropdown />
+          <SizeDropdown size={size} setSize={setSize} ref={sizeRef}/>
           <div className="product-action-box">
-            <button className="add-cart-btn" onClick={()=>addToCart(product.id)}>Add to Card</button>
+            <button className="add-cart-btn" onClick={handleAdd}>Add to Card</button>
             <button
               className={`fav-btn ${isFav}?"active":""`}
               onClick={() => {

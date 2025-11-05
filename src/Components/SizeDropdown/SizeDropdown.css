@@ -19,6 +19,6 @@
 }
 
 .size-dropdown select:focus {
-  outline: none;
+  outline: 1px solid #ff3366;
   border-color: #555;
 }
